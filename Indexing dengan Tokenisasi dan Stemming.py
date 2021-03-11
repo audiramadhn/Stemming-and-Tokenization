@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
+# Sastrawi Stemmer
 
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+import pandas as pd
 
 factorystem = StemmerFactory()
 stemmer = factorystem.create_stemmer()
@@ -34,13 +34,14 @@ for word in word_count_list[:100]:
     print(word, word_count[word])
 
 
-# In[39]:
+# In[39]: Porter Stemmer
 
 
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords 
 import re
+import pandas as pd
 
 porter=PorterStemmer()
 stops = set(stopwords.words('english')) 
@@ -88,19 +89,6 @@ filtered_sentence = (" ").join(tokens_without_sw)
 print(filtered_sentence)
 
 
-# In[7]:
-
-
-
-
-
-# In[1]:
-
-
-
-
-
-# In[3]:
 
 
 
